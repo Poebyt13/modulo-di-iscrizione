@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/normalize.css">
+</head>
+<body id="body">
+  <main class="main">
+    <div class="main__left">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="main__right">
+      <div class="offerta">
+        <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+      </div>
+      <form action="url" class="formulario">
+        <!--ESTO ES EL PRIMER INPUT-->
+        <input type="text" placeholder="First Name" class="formulario__input" required maxlength="15" name="firstName">
+        <p class="error">Firs Name Cannot be empty <img src="/images/icon-error.svg" alt="icon-error" class="icon-error"></p>
+
+        <!--ESTO ES EL PRIMER INPUT-->
+        <input type="text" placeholder="Last Name" class="formulario__input" maxlength="15" name="lastName">
+        <p class="error">Last Name cannot be empty <img src="/images/icon-error.svg" alt="icon-error" class="icon-error"></p>
+
+        <!--ESTO ES EL PRIMER INPUT-->
+        <input type="email" placeholder="Email Address" class="formulario__input"
+        maxlength="30" name="emailAddress">
+        <p class="error">Looks like this is not an email <img src="/images/icon-error.svg" alt="icon-error" class="icon-error"></p>
+
+        <!--ESTO ES EL PRIMER INPUT-->
+        <input type="password" placeholder="Password" class="formulario__input" name="password">
+        <p class="error">Password cannot be empty <img src="/images/icon-error.svg" alt="icon-error" class="icon-error"></p>
+        
+        <!--******************************************-->
+        <div class="tasto">
+          <a class="firstA"><input type="button" value="CLAIM YOUR FREE TRIAL" class="form-button" id="buttone"></a>
+          <p>By clicking the button, you are agreeing to our <a href="#"><b>Terms and Services</b></a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="risposta" id="risposta">
+    <p>registered successfully</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
