@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+.risposta{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    position: absolute;
+    transition-duration: .5s;
+    top: -5rem;
+    //top: 2rem;
+    border-radius: 10px;
+    min-width: 14rem;
+    border-radius: 22px;
+    background: linear-gradient(145deg, hsl(113, 74%, 41%), hsl(108, 94%, 38%));
+    box-shadow:  7px 7px 29px #2ab300, -7px -7px 29px hsl(0, 0%, 83%);
+}
+

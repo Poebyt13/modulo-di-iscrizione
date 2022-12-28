@@ -1,0 +1,65 @@
+@use 'variables' as *;
+@use 'mainLeft';
+@use 'mainRight';
+@use 'risposta';
+
+body{
+    transition-duration: 1s;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: $colore-primario-rosso;
+    background-image: url(/images/bg-intro-desktop.png);
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+
+
+    .main{
+        display: flex;
+        width: 70%;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+}
+
+
+@media only screen and(max-width: 1300px){
+
+    body{
+        min-height: 100vh;
+
+        .main{
+            width: 90%;
+            transition-duration: .5s;
+        }
+    }
+}
+
+@media only screen and(max-width: 1000px){
+
+    body{
+        min-height: 100vh;
+
+        .main{
+            flex-direction: column;
+            width: 100%;
+            transition-duration: .5s;
+            height: 100%;
+            padding-bottom: 3rem;
+
+            &__right{
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and(max-height: 650px){
+    .main{
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+}

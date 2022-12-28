@@ -1,0 +1,35 @@
+
+@use 'variables' as *;
+
+.main__left{
+    transition-duration: .5s;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 42.5%;
+    p{
+        font-size: 1.1rem;
+        font-weight: 200;
+        line-height: 1.5rem;
+        margin-right: 1rem;
+    }
+}
+
+
+@media only screen and(max-width: 1000px){
+
+    .main__left{
+        width: 60%;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and(max-width: 700px){
+    .main__left{
+        font-size: 1.25rem;
+        transition-duration: .5s;
+        width: 80%;
+    }
+}

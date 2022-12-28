@@ -1,0 +1,185 @@
+
+@use 'variables' as *;
+
+.main__right{
+    transition-duration: .5s;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+    justify-content: space-evenly;
+
+    .offerta{
+        color: white;
+        background-color: $colore-secondario-blue;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 350;
+        height: 3.4rem;
+        box-shadow: 0rem .4rem 1rem 0rem black;
+        margin-bottom: 2rem;
+
+        p{
+            margin: 0;
+            margin-top: .2rem;
+        }
+    }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0rem .4rem 2rem 0rem black;
+
+        &__input{
+            height: 3rem;
+            margin: .5rem 2rem .7rem 2rem;
+            border-radius: 5px;
+            border: 1px solid rgb(172, 172, 172);
+            padding-left: 1.75rem;
+            font-weight: 500;
+            color: $colore-neutral-bluScuro;
+            font-size: .9rem;
+
+
+            &:hover{
+                border: 1px solid $colore-secondario-blue;
+            }
+
+            &:focus{
+                outline: none;
+                border: .123rem solid $colore-secondario-blue;
+            }
+
+            &:first-child{
+                margin-top: 3.35rem;
+            }
+        }
+
+        //ERROR---- **************************MESSAGGE
+
+        .error{
+            color: $colore-primario-rosso;
+            font-style: italic;
+            font-size: .7rem;
+            font-weight: 500;
+            margin: 0rem 2rem .7rem 0;
+            display: flex;
+            justify-content: end;
+
+            visibility: hidden;
+            position: absolute;
+
+            &__placeholder::placeholder{
+                color: $colore-primario-rosso;
+            }
+
+            img{
+                width: 1.5rem;
+                align-self: flex-end;
+                margin-right: 1.5rem;
+                transform: translateY(-2.4rem);
+
+                position: absolute;
+                visibility: hidden;
+            }
+        }
+
+        //borde error rosso
+        .input-error{   
+            border: 2px solid $colore-primario-rosso;
+        }
+
+
+        /*+++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+        .tasto{
+            margin: 1rem 2rem 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+
+            .firstA, input{
+                animation-duration: .5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                background-color: $colore-primario-verde;
+                border: none;
+                height: 3.25rem;
+                color: white;
+                font-weight: 600;
+                border-radius: 5px;
+                padding-top: .2rem;
+                cursor: pointer;
+
+                &:hover{
+                    transition-duration: .5s;
+                    background-color: hsl(154, 100%, 34%);
+                }
+            }
+
+            input{
+                width: 100%;
+                height: 100%;
+            }
+
+
+
+            p{
+                font-size: .7rem;
+                color: $colore-neutral-bluChiaro;
+                text-align: center;
+
+
+                a{
+                    text-decoration: none;
+
+                    b{
+                        color: $colore-primario-rosso;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media only screen and(max-width: 1000px){
+
+    .main__right{
+        width: 60%;
+
+        .offerta{
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@media only screen and(max-width: 700px){
+    .main__right{
+        width: 80%;
+        transition-duration: .5s;
+
+        .offerta{
+            text-align: center;
+
+            p{
+                margin: 0 .5rem 0 .5rem;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    .tasto{
+
+        .firstA, input{
+            font-size: 1rem;
+        }
+    }
+
+}
